@@ -274,12 +274,12 @@ let militaryUnit = {
 
 function mission1(unit){
     let {rank, name, contact} = unit.commandStructure.chiefOfStaff;
-    return [rank, name, contact];
+    return `Rank: ${rank}\nName: ${name}\nContact Details: ${contact}`;
 }
 
 function mission2(unit){
   let amountSoldiers = unit.personnel.length;
-  return amountSoldiers
+  return `Total Personel: ${amountSoldiers}`;
 }
 
 function mission3(unit, newDeployment) {
@@ -305,7 +305,7 @@ function mission4(unit, newFirearm){
 function mission5(unit){
   let allTrainingList = unit.trainingPrograms;
   let totalDuration = allTrainingList.reduce((total, trainingPrograms) => total + trainingPrograms.duration, 0);
-  return totalDuration; 
+  return `The total duration of all of Unit ${militaryUnit}'s training programs is: ${totalDuration}`; 
 }
 
 module.exports = {
